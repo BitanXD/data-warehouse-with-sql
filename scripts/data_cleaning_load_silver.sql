@@ -29,3 +29,24 @@ ROW_NUMBER() OVER(PARTITION BY cst_id ORDER BY cst_create_date DESC) AS flag_las
 FROM dw_bronze.crm_cust_info
 WHERE cst_id IS NOT NULL) AS T
 WHERE flag_last = 1;
+
+
+-- crm_prd_info
+
+SELECT 
+prd_id,
+prd_key,
+REPLACE(SUBSTRING(prd_key, 1, 5),'-','_') AS cat_id,
+SUBSTRING(prd_key, 7, LEN(prd_key)) AS prd_key,
+prd_nm,
+ISNULL(prd_cost,0) AS prd_cost,
+CASE UPPER(TRIM(prd_line)) 
+	 WHEN 'M' THEN 'Mountain'
+	 WHEN 'R' THEN 'Road'
+	 WHEN 'S' THEN 'Other Sales'
+	 WHEN 'T' THEN 'Touring'
+	 ELSE 'N/A'
+END AS prd_line,
+prd_start_dt,
+prd_end_dt
+FROM dw_bronze.crm_prd_info;
