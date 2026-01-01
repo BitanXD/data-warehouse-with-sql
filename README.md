@@ -9,3 +9,7 @@ DATA FLOW DIAGRAM
 
 
 <img width="1962" height="1009" alt="image" src="https://github.com/user-attachments/assets/d7d38786-8b30-430e-9b93-26cc8bee772a" />
+
+## Integration Model
+<img width="1470" height="593" alt="image" src="https://github.com/user-attachments/assets/21e4411c-d32d-49ed-b85e-3b02a4b8fb24" />
+
