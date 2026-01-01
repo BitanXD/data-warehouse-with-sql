@@ -4,10 +4,10 @@ This project will demonstrate a comprehensive data warehouse solution, from buil
 <img width="1544" height="912" alt="image" src="https://github.com/user-attachments/assets/97528a40-31e1-49f4-9aa5-0f8dba5a7d60" />
 
 
-DATA FLOW DIAGRAM
+## DATA FLOW DIAGRAM
 <img width="1300" height="885" alt="image" src="https://github.com/user-attachments/assets/9a46911a-d08c-44d0-b79e-afba65f00dc4" />
 
-
+## Workflow for Bronze and Silver Layers
 <img width="1962" height="1009" alt="image" src="https://github.com/user-attachments/assets/d7d38786-8b30-430e-9b93-26cc8bee772a" />
 
 ## Integration Model
