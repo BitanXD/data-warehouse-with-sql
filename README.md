@@ -6,3 +6,6 @@ This project will demonstrate a comprehensive data warehouse solution, from buil
 
 DATA FLOW DIAGRAM
 <img width="1300" height="885" alt="image" src="https://github.com/user-attachments/assets/9a46911a-d08c-44d0-b79e-afba65f00dc4" />
+
+
+<img width="1962" height="1009" alt="image" src="https://github.com/user-attachments/assets/d7d38786-8b30-430e-9b93-26cc8bee772a" />
