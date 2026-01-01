@@ -1,7 +1,11 @@
 CREATE OR ALTER PROCEDURE dw_bronze.load_bronze AS
 BEGIN
-DECLARE @start_time DATETIME, @end_time DATETIME;
+DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
 	BEGIN TRY
+		SET @batch_start_time = GETDATE();
+		PRINT '----------------------------------------------------------------------------------';
+		PRINT 'Loading Bronze Layer Tables';
+		PRINT '----------------------------------------------------------------------------------';
 		PRINT '----------------------------------------------------------------------------------';
 		PRINT 'Loading CRM tables';
 		PRINT '----------------------------------------------------------------------------------';
@@ -103,6 +107,11 @@ DECLARE @start_time DATETIME, @end_time DATETIME;
 		);
 		SET @end_time = GETDATE();
 		PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' secs';
+		PRINT '------------------------------------------------------------------------------------------';
+
+
+		SET @batch_end_time = GETDATE();
+		PRINT '>> Total Load Duration for Bronze Layer: ' + CAST(DATEDIFF(SECOND, @batch_start_time, @batch_end_time) AS NVARCHAR) + ' secs';
 		PRINT '------------------------------------------------------------------------------------------';
 
 	END TRY
